@@ -1,0 +1,16 @@
+# Miscellany files
+include LICENSE
+include README.rst
+include tox.ini
+include requirements.txt
+
+# Theme
+recursive-include sphinx_docs_theme *
+recursive-exclude sphinx_docs_theme *.pyc
+recursive-exclude sphinx_docs_theme *.pyo
+
+# Documentation
+recursive-include docs *
+recursive-exclude docs *.pyc
+recursive-exclude docs *.pyo
+prune docs/_build
