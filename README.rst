@@ -36,19 +36,6 @@ You can also create the documentation from the source files, kept in the 'docs'
 folder, with the help of Sphinx. For this use the makefile, or the make.bat
 file, contained on that folder.
 
-Usage
------
-
-The theme can be used just by adding the following lines to the conf.py file
-of any `Sphinx`_ project:
-
-.. code::
-
-    import sphinx_docs_theme
-
-    html_theme = 'sphinx_docs_theme'
-    html_theme_path = sphinx_docs_theme.get_html_theme_path()
-
 Prerequisites
 ~~~~~~~~~~~~~
 
@@ -61,6 +48,33 @@ These can be installed with the included makefile by using the following
 command:
 
 ``$ make requirements``
+
+Installing
+~~~~~~~~~~
+
+The project is offered as a `Pypi package`_, and using pip is the preferred way
+to install it. For this use the following command;
+
+``$ pip install sphinx-docs-theme``
+
+If manual installation is required, the project includes a setup.py file, along
+a makefile allowing direct installation of the library, which can be done with
+the following command:
+
+``$ make install``
+
+Usage
+-----
+
+The theme can be used just by adding the following lines to the conf.py file
+of any `Sphinx`_ project:
+
+.. code::
+
+    import sphinx_docs_theme
+
+    html_theme = 'sphinx_docs_theme'
+    html_theme_path = sphinx_docs_theme.get_html_theme_path()
 
 Collaborate
 -----------
@@ -94,4 +108,5 @@ The project has been released under the `MIT License`_.
 .. _GitHub project page: https://github.com/Bernardo-MG/sphinx-docs-theme
 .. _project issues tracker: https://github.com/Bernardo-MG/sphinx-docs-theme/issues
 .. _latest docs: http://sphinx-docs-theme.readthedocs.org/en/latest/
+.. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
