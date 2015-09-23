@@ -70,7 +70,7 @@ the following command:
 ``$ make install``
 
 Using it as a dependency
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the project has been installed in the local libraries repository, it can be
 used just by adding the following lines to the conf.py file of any Sphinx
@@ -84,7 +84,7 @@ project:
     html_theme_path = sphinx_docs_theme.get_html_theme_path()
 
 Using it from the Sphinx themes folder
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another possibility is just adding the project to the themes folder of your
 Sphinx project, which is:
