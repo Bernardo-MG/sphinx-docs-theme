@@ -36,6 +36,12 @@ You can also create the documentation from the source files, kept in the 'docs'
 folder, with the help of Sphinx. For this use the makefile, or the make.bat
 file, contained on that folder.
 
+Usage
+-----
+
+The project is a `Sphinx`_ theme, which can be used in a similar way to any
+other such theme.
+
 Prerequisites
 ~~~~~~~~~~~~~
 
@@ -63,11 +69,12 @@ the following command:
 
 ``$ make install``
 
-Usage
------
+Using it as a dependency
+------------------------
 
-The theme can be used just by adding the following lines to the conf.py file
-of any `Sphinx`_ project:
+If the project has been installed in the local libraries repository, it can be
+used just by adding the following lines to the conf.py file of any Sphinx
+project:
 
 .. code::
 
@@ -75,6 +82,21 @@ of any `Sphinx`_ project:
 
     html_theme = 'sphinx_docs_theme'
     html_theme_path = sphinx_docs_theme.get_html_theme_path()
+
+Using it from the Sphinx themes folder
+--------------------------------------
+
+Another possibility is just adding the project to the themes folder of your
+Sphinx project, which is:
+
+``docs\_themes\sphinx_docs_theme\``
+
+And then it is just needed to add the following files to the conf.py file:
+
+.. code::
+
+    html_theme = 'sphinx_docs_theme'
+    html_theme_path = ["_themes", ]
 
 Collaborate
 -----------
