@@ -104,7 +104,6 @@ html_theme_options = {
     'author_url': 'https://github.com/Bernardo-MG',
     'twitter_id': '@wandrell',
     'publish_date': datetime.datetime.now().date(),
-    'version': version,
     'scm_name': 'Github',
     'scm_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme',
     'ci_name': 'Travis',
