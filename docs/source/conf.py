@@ -86,7 +86,7 @@ html_theme_path = sphinx_docs_theme.get_html_theme_path()
 # Theme options.
 html_theme_options = {
     'keywords': 'Sphinx, theme, Bootstrap, documentation',
-    'author_name': u'Bernardo Martínez Garrido',
+    'author_name': ','.join(authors),
     'author_url': 'https://github.com/Bernardo-MG',
     'twitter_id': '@wandrell',
     'publish_date': datetime.datetime.now().date(),
