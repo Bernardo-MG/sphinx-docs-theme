@@ -112,6 +112,8 @@ html_theme_options = {
     'issues_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme/issues',
     'supported_list': ['Sphinx'],
     'releases_repos': [('Pypi','https://pypi.python.org/pypi/sphinx-docs-theme')],
+    'general_info_links': [('Acquire','./acquire.html'),
+                           ('Usage','./usage.html')],
 }
 
 # Output file base name for HTML help builder.

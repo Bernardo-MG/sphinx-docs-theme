@@ -86,8 +86,9 @@ project:
 Using it from the Sphinx themes folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Another possibility is just adding the project to the themes folder of your
-Sphinx project, which is:
+Another possibility is just adding the project code, contained int the
+'sphinx_docs_theme' folder, to the themes folder of your Sphinx project, which
+is:
 
 ``docs\_themes\sphinx_docs_theme\``
 

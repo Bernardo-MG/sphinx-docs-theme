@@ -6,10 +6,13 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-12 col-xs-12">
                             <dl class="dl-nav">
+                                {% if theme_general_info_links %}
                                 <dt>General Info</dt>
-                                <dd><a href="#">Acquire</a></dd>
-                                <dd><a href="#">Getting Started</a></dd>
-                                <dd><a href="#">Changes Log</a></dd>
+                                {% for link in theme_general_info_links %}
+                                <dd><a href="{{ link[1] }}">{{ link[0] }}</a>
+                                </dd>
+                                {% endfor %}
+                                {% endif %}
                             </dl>
                         </div>
                         <div class="col-md-4 col-sm-12 col-xs-12">
