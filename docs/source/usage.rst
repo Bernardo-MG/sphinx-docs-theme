@@ -1,6 +1,6 @@
-#####
+=====
 Usage
-#####
+=====
 
 This project is meant to be used with a `Sphinx`_ project, as it is a UI theme
 for it.
@@ -10,6 +10,11 @@ installed in the local repository and then be used as a dependency, or the
 project code, the 'sphinx_docs_theme', can be copied to the Sphinx project
 themes folder.
 
+--------------------
+Setting up the theme
+--------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~
 Using it as a dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -24,6 +29,7 @@ project:
     html_theme = 'sphinx_docs_theme'
     html_theme_path = sphinx_docs_theme.get_html_theme_path()
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Using it from the Sphinx themes folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -42,5 +48,13 @@ And then it is just needed to add the following files to the conf.py file:
     html_theme = 'sphinx_docs_theme'
     html_theme_path = ["_themes", ]
 
+--------------
+Theme variable
+--------------
+
+After setting up the theme the theme variables should be configured. To find
+more about them check the `configuration`_ section.
+
 
 .. _Sphinx: http://sphinx-doc.org/
+.. _configuration: ./configuration.html
