@@ -105,8 +105,9 @@ html_theme_options = {
     'general_info_links': [('Acquire', './acquire.html'),
                            ('Usage', './usage.html')],
     'navbar_links': [('Documentation', [('Acquire', './acquire.html'),
-                   ('Usage', './usage.html'),
-                   ('Configuration', './configuration.html')])],
+                                        ('Usage', './usage.html'),
+                                        ('Configuration',
+                                         './configuration.html')])],
 }
 
 # Output file base name for HTML help builder.
