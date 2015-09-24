@@ -31,7 +31,9 @@ Another possibility is just adding the project code, contained int the
 'sphinx_docs_theme' folder, to the themes folder of your Sphinx project, which
 is:
 
-``docs\_themes\``
+.. code::
+
+    docs\_themes\
 
 And then it is just needed to add the following files to the conf.py file:
 

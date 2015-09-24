@@ -1,29 +1,19 @@
-#################
-Sphinx Docs Theme
-#################
+####################################
+Sphinx theme for documentation sites
+####################################
 
-This is the documentation for the Cookiecutter Python Library.
-
-Created to fit my own tastes, this library offers a series of good practices,
-and a bunch of configurations I've found useful.
-
-*******************
-Getting the library
-*******************
-
-The latest version of the library can always be found at `.. envvar:: scm_name
-<https://github.com/Bernardo-MG/cookiecutter-python-library>`_.
+Sphinx is commonly used for documentation sites, but there is a lack of simple
+and elegant themes. This small theme tries to fix that through a minimalist
+approach, offering a great way to build a small documentation without great
+expectations that distract from the site's actual use: documenting a project.
 
 ********
-Contents
+Features
 ********
 
-Contents:
+The main features offered by the theme are:
 
-.. toctree::
-   :maxdepth: 2
-
-   usage
-   tests
-   makefile
-   doc_site
+- Minimalist and reactive look
+- HTML5
+- Bootstrap
+- Font Awesome icons

@@ -84,20 +84,6 @@ html_theme = 'sphinx_docs_theme'
 html_theme_path = sphinx_docs_theme.get_html_theme_path()
 
 # Theme options.
-# html_theme_options = {
-#     'navbar_fixed_top': 'true',
-#     'navbar_site_name': 'Contents',
-#     'bootstrap_version': '3',
-#     'source_link_position': 'footer',
-#     'bootswatch_theme': 'yeti',
-#     'navbar_links': [
-#         (scm_name,
-#          scm_url,
-#          True),
-#     ],
-# }
-
-# Theme options.
 html_theme_options = {
     'keywords': 'Sphinx, theme, Bootstrap, documentation',
     'author_name': u'Bernardo Martínez Garrido',
@@ -111,9 +97,12 @@ html_theme_options = {
     'issues_name': 'Github',
     'issues_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme/issues',
     'supported_list': ['Sphinx'],
-    'releases_repos': [('Pypi','https://pypi.python.org/pypi/sphinx-docs-theme')],
-    'general_info_links': [('Acquire','./acquire.html'),
-                           ('Usage','./usage.html')],
+    'releases_repos': [
+        ('Pypi', 'https://pypi.python.org/pypi/sphinx-docs-theme')],
+    'general_info_links': [('Acquire', './acquire.html'),
+                           ('Usage', './usage.html')],
+    'docs_links': [('Acquire', './acquire.html'),
+                   ('Usage', './usage.html')],
 }
 
 # Output file base name for HTML help builder.
