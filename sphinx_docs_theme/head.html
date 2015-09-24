@@ -8,7 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{{ docstitle }}</title>
-    <link href="./_static/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    {% if favicon %}
+    <link href="{{ favicon }}" rel="shortcut icon" type="image/x-icon"/>
+    {% endif %}
 
     <!-- Metadata -->
     <meta name="description"
