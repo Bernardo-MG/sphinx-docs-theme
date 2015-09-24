@@ -18,11 +18,9 @@ The main features offered by the theme are:
 - Bootstrap
 - Font Awesome icons
 
---------
-TOC tree
---------
-
 .. toctree::
+   :hidden:
+
    acquire
    usage
    configuration
