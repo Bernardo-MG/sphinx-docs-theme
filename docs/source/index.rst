@@ -17,3 +17,13 @@ The main features offered by the theme are:
 - HTML5
 - Bootstrap
 - Font Awesome icons
+
+--------
+TOC tree
+--------
+
+.. toctree::
+   acquire
+   usage
+   configuration
+   other_config
