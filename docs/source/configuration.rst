@@ -74,7 +74,5 @@ Links are a list of tuples containing the name and URL for each link.
 Variable           Usage
 ================== =====
 general_info_links List of links to show on the general info column in the folder.
-docs_links         List of links to generate the docs menu.
-info_links         List of links to generate the information menu.
+navbar_links       List of links to generate the docs menu. Each element is a tuple, containing a name for the menu and a list of links.
 ================== =====
-

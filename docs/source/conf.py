@@ -104,9 +104,9 @@ html_theme_options = {
         ('Pypi', 'https://pypi.python.org/pypi/sphinx-docs-theme')],
     'general_info_links': [('Acquire', './acquire.html'),
                            ('Usage', './usage.html')],
-    'docs_links': [('Acquire', './acquire.html'),
+    'navbar_links': [('Documentation', [('Acquire', './acquire.html'),
                    ('Usage', './usage.html'),
-                   ('Configuration', './configuration.html')],
+                   ('Configuration', './configuration.html')])],
 }
 
 # Output file base name for HTML help builder.
