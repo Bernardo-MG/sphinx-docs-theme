@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Docs Sphinx Theme Python library documentation build configuration file.
+# Sphinx Docs Theme Python library documentation build configuration file.
 
 import ast
 import re
@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Docs Sphinx Theme'
+project = 'Sphinx Docs Theme'
 project_safe = project.replace(' ', '_')
 copyright = u'%s, Bernardo Martínez Garrido' % datetime.datetime.now().year
 authors = [u'Bernardo Martínez Garrido']
@@ -145,7 +145,7 @@ man_pages = [
 # List of Texinfo documents.
 texinfo_documents = [
     (master_doc, project, '%s Documentation' % project,
-     ','.join(authors), project, 'Docs Sphinx Theme.',
+     ','.join(authors), project, 'Sphinx Docs Theme.',
      'Miscellaneous'),
 ]
 
