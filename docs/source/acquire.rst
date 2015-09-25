@@ -1,6 +1,6 @@
-#####################
+=====================
 Acquiring the project
-#####################
+=====================
 
 The project files are hosted on `Pypi`_, allowing them to be acquired with pip.
 

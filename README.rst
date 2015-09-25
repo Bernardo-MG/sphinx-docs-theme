@@ -27,6 +27,12 @@ Features
 - Bootstrap
 - Font Awesome icons
 
+Demo
+----
+
+To check how the theme looks take a look at the documentation, linked below
+this section, which is created with Sphinx and making use of the theme.
+
 Documentation
 -------------
 

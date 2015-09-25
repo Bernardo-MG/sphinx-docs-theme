@@ -48,9 +48,9 @@ And then it is just needed to add the following files to the conf.py file:
     html_theme = 'sphinx_docs_theme'
     html_theme_path = ["_themes", ]
 
---------------
-Theme variable
---------------
+---------------
+Theme variables
+---------------
 
 After setting up the theme the theme variables should be configured. To find
 more about them check the `configuration`_ section.

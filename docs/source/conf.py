@@ -84,7 +84,7 @@ html_theme = 'sphinx_docs_theme'
 html_theme_path = sphinx_docs_theme.get_html_theme_path()
 
 # Removes permalink markers
-html_add_permalinks = False
+html_add_permalinks = ''
 
 # Theme options.
 html_theme_options = {
@@ -107,7 +107,9 @@ html_theme_options = {
     'navbar_links': [('Documentation', [('Acquire', './acquire.html'),
                                         ('Usage', './usage.html'),
                                         ('Configuration',
-                                         './configuration.html')])],
+                                         './configuration.html'),
+                                        ('Other',
+                                         './other_configuration.html')])],
 }
 
 # Output file base name for HTML help builder.

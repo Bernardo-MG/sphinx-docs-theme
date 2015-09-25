@@ -10,8 +10,10 @@ matrix:
 
 before_install:
   - chmod +x ./.scripts/deploy_docs.sh
+  - chmod +x ./.scripts/run_doc_tests.sh
 install:
   - pip install tox
 script:
-  - if [ ! -z "TEST_DOCS" ] && [ "TEST_DOCS" == "true" ]; then tox -e docs; fi
+  - ./.scripts/run_doc_tests.sh
+after_success:
   - ./.scripts/deploy_docs.sh
