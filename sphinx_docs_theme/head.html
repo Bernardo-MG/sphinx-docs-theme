@@ -15,8 +15,12 @@
     <!-- Metadata -->
     <meta name="description"
           content="{{ project }} documentation site">
+    {% if theme_keywords %}
     <meta name="keywords" content="{{ theme_keywords }}">
+    {% endif %}
+    {% if theme_author_name %}
     <meta name="author" content="{{ theme_author_name }}">
+    {% endif %}
 
     <!-- Facebook OpenGraph -->
     <meta property="og:type" content="website"/>
@@ -25,10 +29,10 @@
     <meta property="og:description"
           content="Check the documentation site for {{ project }}"/>
 
+    {% if theme_twitter_id %}
     <!-- Twitter Card -->
-    {% if twitter_id %}
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="{{ twitter_id }}"/>
+    <meta name="twitter:site" content="{{ theme_twitter_id }}"/>
     <meta name="twitter:title" content="{{ project }} documentation site"/>
     <meta name="twitter:description"
           content="Check the documentation site for {{ project }}"/>
