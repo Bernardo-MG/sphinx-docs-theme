@@ -14,9 +14,9 @@ Features
 The main features offered by the theme are:
 
 - Minimalist and reactive look
-- HTML5
-- Bootstrap
-- Font Awesome icons
+- `HTML5`_
+- `Bootstrap 3`_
+- `Font Awesome`_ icons
 
 .. toctree::
    :hidden:
@@ -25,3 +25,7 @@ The main features offered by the theme are:
    usage
    configuration
    other_config
+
+.. _HTML5: http://www.w3.org/TR/html5/
+.. _Bootstrap 3: http://getbootstrap.com
+.. _Font Awesome: https://fortawesome.github.io/Font-Awesome/
