@@ -23,9 +23,9 @@ Features
 --------
 
 - Minimalist and reactive look
-- HTML5
-- Bootstrap
-- Font Awesome icons
+- `HTML5`_
+- `Bootstrap 3`_
+- `Font Awesome`_ icons
 
 Demo
 ----
@@ -139,3 +139,7 @@ The project has been released under the `MIT License`_.
 .. _latest docs: http://sphinx-docs-theme.readthedocs.org/en/latest/
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
+
+.. _HTML5: http://www.w3.org/TR/html5/
+.. _Bootstrap 3: http://getbootstrap.com
+.. _Font Awesome: https://fortawesome.github.io/Font-Awesome/
