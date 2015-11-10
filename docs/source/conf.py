@@ -118,7 +118,7 @@ html_theme_options = {
                                         ('Configuration',
                                          './configuration.html'),
                                         ('Other',
-                                         './other_configuration.html')])],
+                                         './other_config.html')])],
 }
 
 # Output file base name for HTML help builder.
