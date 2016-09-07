@@ -1,28 +1,12 @@
 /*!
- * Docs Boostrap Template list styles
- * Copyright 2015 Bernardo Martínez Garrido
  * Licensed under the MIT License (http://www.opensource.org/licenses/mit-license.php)
- *
- * This file contains styles for the lists.
+ */
+/*!
+ * List styles.
  */
 
 dt:after {
     content: ":";
-}
-
-/**
-* Horizontal definition list.
-*/
-
-.dl-horizontal dt {
-    float: left;
-    width: 6em;
-    text-align: left;
-    white-space: normal;
-}
-
-.dl-horizontal dd {
-    margin-left: 6em;
 }
 
 /**
@@ -50,12 +34,25 @@ dt:after {
 * Icons inline list.
 */
 
-.icons-list-inline {
+.icons-list {
     font-size: 0;
     list-style: none;
 }
 
-.icons-list-inline > li {
-    display: inline-block;
+.icons-list > li {
     font-size: 19px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 992px) {
+    .icons-list > li {
+        display: inline-block;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .icons-list > li {
+        display: inline-block;
+    }
 }
