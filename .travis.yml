@@ -4,18 +4,18 @@
 # Using Python for the project
 language: python
 python:
-  # Python 2.7 is set to test and deploy the docs in the configuration matrix
-  #- "2.7"
+  - "2.7"
   - "3.3"
   - "3.4"
-  - "3.5"
+  # Python 3.5 is set to test and deploy the docs in the configuration matrix
+  #- "3.5"
   - "pypy"
   - "pypy3"
 env:
   - TEST_DOCS=true
 matrix:
   include:
-    - python: "2.7"
+    - python: "3.5"
       env: TEST_DOCS=true DEPLOY_DOCS=true
 
 before_install:
