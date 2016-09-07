@@ -1,19 +1,30 @@
+# Travis CI Configuration file
+# @link https://travis-ci.org/
+
+# Using Python for the project
 language: python
 python:
   - "3.4"
 env:
-  - TEST_DOCS=true DEPLOY_DOCS=false
+  - TEST_DOCS=true
 matrix:
   include:
     - python: "2.7"
-      env: TEST_DOCS=true DEPLOY_DOCS=true PULL_REQUEST=$TRAVIS_PULL_REQUEST SCM_BRANCH=$TRAVIS_BRANCH
+      env: TEST_DOCS=true DEPLOY_DOCS=true
 
 before_install:
-  - chmod +x ./.scripts/deploy_docs.sh
-  - chmod +x ./.scripts/run_doc_tests.sh
+  # Gets scripts
+  - git clone -b v0.2.0 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
+  # Sets scripts as executable
+  - chmod -R +x ~/.scripts/*
+  # Prepares CI environment
+  - source ~/.scripts/travis/load-travis-environment.sh
 install:
+  # tox is required for the tests
   - pip install tox
 script:
-  - ./.scripts/run_doc_tests.sh
+  # Documentation tests are run
+  - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
 after_success:
-  - ./.scripts/deploy_docs.sh
+  # Documentation deployment
+  - ~/.scripts/rtd/deploy.sh $DO_DEPLOY_DOCS sphinx-docs-theme
