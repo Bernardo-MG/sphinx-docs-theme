@@ -4,7 +4,7 @@
 # Using Python for the project
 language: python
 python:
-  - "3.4"
+  - "3.5"
 env:
   - TEST_DOCS=true
 matrix:
