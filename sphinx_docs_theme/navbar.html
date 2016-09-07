@@ -15,6 +15,7 @@
         </div>
 
         <div id="navbar-main-body" class="navbar-body navbar-collapse collapse">
+            <small class="navbar-text">{{ version }}{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <ul class="list-unstyled icons-list-inline">
@@ -22,8 +23,8 @@
                         'Github' %}
                         <li><a href="{{ theme_scm_url }}" title="GitHub"
                                aria-label="GitHub"><span
-                                class="navbar-icon fa fa-inverse fa-github"
-                                aria-hidden="true"></span></a></li>
+                                    class="navbar-icon fa fa-github"
+                                    aria-hidden="true"></span><span class="hidden-md hidden-lg"> Github</span></a></li>
                         {% endif %}
                     </ul>
                 </li>
