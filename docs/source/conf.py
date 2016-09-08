@@ -97,11 +97,12 @@ html_add_permalinks = ''
 
 # Theme options.
 html_theme_options = {
-    'keywords': 'Sphinx, theme, Bootstrap, documentation',
+    'keywords': 'Sphinx, theme, Bootstrap, HTML5, documentation',
     'author_name': ','.join(authors),
     'author_url': 'https://github.com/Bernardo-MG',
     'twitter_id': '@Wandrell_BMG',
     'publish_date': datetime.datetime.now().date(),
+    'years': '2015-%s' % datetime.datetime.now().year,
     'scm_name': 'Github',
     'scm_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme',
     'ci_name': 'Travis',
