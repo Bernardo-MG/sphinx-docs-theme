@@ -17,6 +17,7 @@ The main features offered by the theme are:
 - `HTML5`_
 - `Bootstrap 3`_
 - `Font Awesome`_ icons
+- Prepared for `Facebook's Open Graph`_ and `Twitter Cards`_
 
 .. toctree::
    :hidden:
@@ -29,3 +30,6 @@ The main features offered by the theme are:
 .. _HTML5: http://www.w3.org/TR/html5/
 .. _Bootstrap 3: http://getbootstrap.com
 .. _Font Awesome: https://fortawesome.github.io/Font-Awesome/
+.. _highlight.js: https://highlightjs.org/
+.. _Facebook's Open Graph: http://ogp.me/
+.. _Twitter Cards: https://dev.twitter.com/cards/overview

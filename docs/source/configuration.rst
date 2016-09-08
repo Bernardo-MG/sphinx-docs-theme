@@ -84,7 +84,6 @@ years          The years range in which the project was published, as a string  
 publish_date   Date in which the Sphinx-created page has been published            datetime.datetime.now().date()
 license_name   Name of the license under which the project has been released       'MIT'
 license_url    URL for the license                                                 'http://www.opensource.org/licenses/mit-license.php'
-supported_list List of versions supported by the project. Usually Python versions. ['Python 2.7', 'Python 3.4']
 ============== =================================================================== =======
 
 -----------------
