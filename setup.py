@@ -72,8 +72,10 @@ setup(
     platforms='any',
     classifiers=[
         'Development Status :: 4 - Beta',
-        'License :: OSI Approved :: MIT License',
+        'Framework :: Sphinx',
+        'Framework :: Sphinx :: Theme',
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
@@ -83,6 +85,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Topic :: Documentation',
+        'Topic :: Documentation :: Sphinx',
         'Topic :: Software Development :: Documentation'
     ],
     long_description=read('README.rst'),
