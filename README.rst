@@ -2,8 +2,10 @@
 Sphinx Docs Theme
 =================
 
-A minimalist Bootstrap-based HTML5 theme for Sphinx, used to easily create a
-noticeable documentation site.
+A minimalist Bootstrap-based HTML5 theme for Sphinx, will help to use it as a
+documentation site.
+
+Check the `latest docs`_ to find out how to set it up for your Sphinx project.
 
 The skin has been adapted from the static template `Docs Bootstrap Template`_,
 which will be the visual reference to be followed by this project.
@@ -26,17 +28,23 @@ Features
 - `HTML5`_
 - `Bootstrap 3`_
 - `Font Awesome`_ icons
+- `highlight.js`_ for syntax highlighting
+- Prepared for `Facebook's Open Graph`_ and `Twitter Cards`_
 
 Demo
 ----
 
-To check how the theme looks take a look at the documentation, linked below
-this section, which is created with Sphinx and making use of the theme.
+To check the Sphinx Docs Theme at work take a look at the documentation, linked
+below this section, which is created with Sphinx and making use of this theme.
 
 Documentation
 -------------
 
-Check the `latest docs`_ for the most current version of the documentation.
+Documentation sources are included with the project, and used to generate the
+documentation sites:
+
+- The `latest docs`_ are always generated for the latest release, kept in the 'master' branch
+- The `development docs`_ are generated from the latest code in the 'develop' branch
 
 You can also create the documentation from the source files, kept in the 'docs'
 folder, with the help of Sphinx. For this use the makefile, or the make.bat
@@ -108,7 +116,8 @@ And then it is just needed to add the following files to the conf.py file:
 Collaborate
 -----------
 
-Any kind of help with the project will be well received, and there are two main ways to give such help:
+Any kind of help with the project will be well received, and there are two main
+ways to give such help:
 
 - Reporting errors and asking for extensions through the issues management
 - or forking the repository and extending the project
@@ -137,9 +146,13 @@ The project has been released under the `MIT License`_.
 .. _GitHub project page: https://github.com/Bernardo-MG/sphinx-docs-theme
 .. _project issues tracker: https://github.com/Bernardo-MG/sphinx-docs-theme/issues
 .. _latest docs: http://sphinx-docs-theme.readthedocs.org/en/latest/
+.. _development docs: http://sphinx-docs-theme.readthedocs.org/en/develop/
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
 
 .. _HTML5: http://www.w3.org/TR/html5/
 .. _Bootstrap 3: http://getbootstrap.com
 .. _Font Awesome: https://fortawesome.github.io/Font-Awesome/
+.. _highlight.js: https://highlightjs.org/
+.. _Facebook's Open Graph: http://ogp.me/
+.. _Twitter Cards: https://dev.twitter.com/cards/overview

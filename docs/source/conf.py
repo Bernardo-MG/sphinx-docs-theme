@@ -60,7 +60,7 @@ autodoc_member_order = 'groupwise'
 # General information about the project.
 project = 'Sphinx Docs Theme'
 project_safe = project.replace(' ', '_')
-copyright = u'2015, Bernardo Martínez Garrido'
+copyright = u'2015-%s, Bernardo Martínez Garrido' % datetime.datetime.now().year
 authors = [u'Bernardo Martínez Garrido']
 
 # The version info for the project.
@@ -97,18 +97,18 @@ html_add_permalinks = ''
 
 # Theme options.
 html_theme_options = {
-    'keywords': 'Sphinx, theme, Bootstrap, documentation',
+    'keywords': 'Sphinx, theme, Bootstrap, HTML5, documentation',
     'author_name': ','.join(authors),
     'author_url': 'https://github.com/Bernardo-MG',
-    'twitter_id': '@Bernardo-MG',
+    'twitter_id': '@Wandrell_BMG',
     'publish_date': datetime.datetime.now().date(),
+    'years': '2015-%s' % datetime.datetime.now().year,
     'scm_name': 'Github',
     'scm_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme',
     'ci_name': 'Travis',
     'ci_url': 'https://travis-ci.org/Bernardo-MG/sphinx-docs-theme',
     'issues_name': 'Github',
     'issues_url': 'https://github.com/Bernardo-MG/sphinx-docs-theme/issues',
-    'supported_list': ['Sphinx'],
     'releases_repos': [
         ('Pypi', 'https://pypi.python.org/pypi/sphinx-docs-theme')],
     'general_info_links': [('Acquire', './acquire.html'),
