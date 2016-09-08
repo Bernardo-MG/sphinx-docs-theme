@@ -26,9 +26,17 @@ before_install:
 install:
   # tox is required for the tests
   - pip install tox
+  # JSHint
+  - npm install -g jshint
+  # Recess
+  - npm install -g recess
 script:
   # Documentation tests are run
   - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
+  # Javascript validation
+  - jshint ./sphinx_docs_theme/static/js/*
+  # CSS validation
+  - recess ./sphinx_docs_theme/static/css/*
 after_success:
   # Documentation deployment
   - ~/.scripts/rtd/deploy.sh $DO_DEPLOY_DOCS sphinx-docs-theme
