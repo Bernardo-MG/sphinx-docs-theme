@@ -71,6 +71,7 @@ setup(
     keywords=['sphinx', 'theme', 'bootstrap', 'python'],
     platforms='any',
     classifiers=[
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
