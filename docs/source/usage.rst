@@ -7,7 +7,7 @@ for it.
 
 There are two ways to apply the theme, which are nearly the same. It can be
 installed in the local repository and then be used as a dependency, or the
-project code, the 'sphinx_docs_theme', can be copied to the Sphinx project
+project code (the 'sphinx_docs_theme' folder) can be copied to the Sphinx project
 themes folder.
 
 --------------------
