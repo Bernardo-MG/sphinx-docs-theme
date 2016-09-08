@@ -68,7 +68,7 @@ setup(
     license='MIT',
     url='https://github.com/Bernardo-MG/sphinx_docs_theme',
     download_url='https://github.com/Bernardo-MG/sphinx_docs_theme',
-    keywords=['sphinx', 'theme', 'bootstrap', 'python'],
+    keywords=['sphinx', 'theme', 'bootstrap', 'html5', 'python'],
     platforms='any',
     classifiers=[
         'Development Status :: 4 - Beta',
