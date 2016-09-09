@@ -26,10 +26,6 @@ before_install:
 install:
   # tox is required for the tests
   - pip install tox
-  # JSHint
-  - npm install -g jshint
-  # Recess
-  - npm install -g recess
 script:
   # Documentation tests are run
   - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs,js,css
