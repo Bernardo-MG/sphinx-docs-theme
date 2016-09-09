@@ -27,8 +27,12 @@ install:
   # tox is required for the tests
   - pip install tox
 script:
+  # JS is verified
+  - ~/.scripts/python/run_tests.sh true js
+  # CSS is verified
+  - ~/.scripts/python/run_tests.sh true css
   # Documentation tests are run
-  - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs,js,css
+  - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
 after_success:
   # Documentation deployment
   - ~/.scripts/rtd/deploy.sh $DO_DEPLOY_DOCS sphinx-docs-theme
