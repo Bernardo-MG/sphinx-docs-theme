@@ -26,6 +26,8 @@ before_install:
 install:
   # tox is required for the tests
   - pip install tox
+  # Recess
+  - npm install -g recess
 script:
   # JS is verified
   - ~/.scripts/python/run_tests.sh true js
