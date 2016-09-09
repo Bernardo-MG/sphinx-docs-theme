@@ -30,7 +30,7 @@ script:
   # JS is verified
   - ~/.scripts/python/run_tests.sh true js
   # CSS is verified
-  - ~/.scripts/python/run_tests.sh true css
+  - recess ./sphinx_docs_theme/static/css/*
   # Documentation tests are run
   - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
 after_success:
