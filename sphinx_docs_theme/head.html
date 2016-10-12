@@ -38,12 +38,12 @@
     {% endif %}
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./_static/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ pathto('./_static/lib/bootstrap/css/bootstrap.min.css', 1) }}">
     <link rel="stylesheet"
-          href="./_static/lib/font-awesome-4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./_static/lib/highlight/styles/default.css">
+          href="{{ pathto('./_static/lib/font-awesome-4.6.3/css/font-awesome.min.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('./_static/lib/highlight/styles/default.css', 1) }}">
     <!-- Docs Template style -->
-    <link rel="stylesheet" href="./_static/css/style.css">
+    <link rel="stylesheet" href="{{ pathto('./_static/css/style.css', 1) }}">
 
     <!-- HTML5 Shiv. For IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
