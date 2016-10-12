@@ -7,7 +7,7 @@
                         {% if theme_general_info_links %}
                         <dt>General Info</dt>
                         {% for link in theme_general_info_links %}
-                        <dd><a href="{{ link[1] }}">{{ link[0] }}</a>
+                        <dd><a href="{{ pathto(link[1], 1) }}">{{ link[0] }}</a>
                         </dd>
                         {% endfor %}
                         {% endif %}

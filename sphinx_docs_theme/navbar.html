@@ -43,7 +43,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         {% for link in link_group[1] %}
-                        <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                        <li><a href="{{ pathto(link[1], 1) }}">{{ link[0] }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>

@@ -9,7 +9,7 @@ import os
     :license: MIT, see LICENSE for more details.
 """
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 __license__ = 'MIT'
 
 
