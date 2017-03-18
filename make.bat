@@ -24,7 +24,7 @@ if "%DISTDIR%" == "" (
 REM Sets the .egg file path.
 REM The file will be located at the project's root.
 if "%EGGDIR%" == "" (
-	set EGGDIR=sphinx_docs_theme.egg-info
+	set EGGDIR={{ cookiecutter.package_name }}.egg-info
 )
 
 REM Sets the tox folder path.
