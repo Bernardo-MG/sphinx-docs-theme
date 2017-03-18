@@ -145,8 +145,8 @@ The project has been released under the `MIT License`_.
 .. _Sphinx: http://sphinx-doc.org/
 .. _GitHub project page: https://github.com/Bernardo-MG/sphinx-docs-theme
 .. _project issues tracker: https://github.com/Bernardo-MG/sphinx-docs-theme/issues
-.. _latest docs: http://sphinx-docs-theme.readthedocs.org/en/latest/
-.. _development docs: http://sphinx-docs-theme.readthedocs.org/en/develop/
+.. _latest docs: http://docs.wandrell.com/sphinx-docs-theme
+.. _development docs: http://docs.wandrell.com/development/sphinx-docs-theme
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
 
