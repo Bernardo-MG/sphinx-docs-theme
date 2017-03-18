@@ -47,7 +47,7 @@ documentation sites:
 - The `development docs`_ are generated from the latest code in the 'develop' branch
 
 You can also create the documentation from the source files, kept in the 'docs'
-folder, with the help of Sphinx. For this use the makefile, or the make.bat
+folder, with the help of `Sphinx`_. For this use the makefile, or the make.bat
 file, contained on that folder.
 
 Usage
