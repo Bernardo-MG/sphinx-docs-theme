@@ -4,37 +4,52 @@
 # Using Python for the project
 language: python
 python:
-  - "2.7"
-  - "3.3"
+  # Python 2.7 is set to test the docs in the configuration matrix
+  #- "2.7"
   - "3.4"
-  # Python 3.5 is set to test and deploy the docs in the configuration matrix
-  #- "3.5"
-env:
-  - TEST_DOCS=true
+  - "3.5"
+  # Python 3.6 is set to test and deploy the docs, and to run the coverage report, in the configuration matrix
+  #- "3.6"
+  - "pypy"
+  - "pypy3"
 matrix:
   include:
-    - python: "3.5"
-      env: TEST_DOCS=true DEPLOY_DOCS=true
+    # Tests docs
+    - python: "2.7"
+      env: TEST_DOCS=true
+    # Tests and deploys docs, also runs coverage report
+    - python: "3.6"
+      env: COVERAGE=true TEST_DOCS=true DEPLOY_DOCS=true
+addons:
+  apt:
+    packages:
+    - sshpass
 
 before_install:
   # Gets scripts
-  - git clone -b v0.2.0 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
+  - git clone -b v0.4.1 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
   # Sets scripts as executable
   - chmod -R +x ~/.scripts/*
   # Prepares CI environment
   - source ~/.scripts/travis/load-travis-environment.sh
+  - source ~/.scripts/travis/load-travis-environment-python.sh
 install:
   # tox is required for the tests
   - pip install tox
-  # Recess
-  - npm install -g recess
+  # sphinx is required for the docs
+  - pip install sphinx
+  # Dependencies
+  - pip install --upgrade -r requirements.txt
 script:
-  # JS is verified
-  - ~/.scripts/python/run_tests.sh true js
-  # CSS is verified
-  - recess ./sphinx_docs_theme/static/css/*
+  # Code is checked
+  - ~/.scripts/python/run_tests.sh true check
+  # Tests are run
+  - ~/.scripts/python/run_tests.sh true $PYTHON_VERSION_TEST
   # Documentation tests are run
   - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
 after_success:
   # Documentation deployment
-  - ~/.scripts/rtd/deploy.sh $DO_DEPLOY_DOCS sphinx-docs-theme
+  - ~/.scripts/sphinx/build-html.sh $DO_DEPLOY_DOCS docs
+  - cd ~/sphinx/build/html
+  - ~/.scripts/deploy/deploy-ssh.sh $DO_DEPLOY_DOCS_RELEASE $DEPLOY_USERNAME $DEPLOY_PASSWORD $DEPLOY_HOST $DEPLOY_PORT $DEPLOY_PATH_RELEASE
+  - ~/.scripts/deploy/deploy-ssh.sh $DO_DEPLOY_DOCS_DEVELOP $DEPLOY_USERNAME $DEPLOY_PASSWORD $DEPLOY_HOST $DEPLOY_PORT $DEPLOY_PATH_DEVELOP
