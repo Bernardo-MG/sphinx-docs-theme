@@ -15,11 +15,11 @@ which will be the visual reference to be followed by this project.
     :alt: Sphinx docs theme Pypi package page
 
 .. image:: https://img.shields.io/badge/docs-release-blue.svg
-    :target: http://docs.wandrell.com/dice-notation-python
-    :alt: Dice Notation Tools for Python latest documentation
+    :target: http://docs.wandrell.com/sphinx-docs-theme
+    :alt: Sphinx docs theme latest documentation
 .. image:: https://img.shields.io/badge/docs-develop-blue.svg
-    :target: http://docs.wandrell.com/development/dice-notation-python
-    :alt: Dice Notation Tools for Python development documentation
+    :target: http://docs.wandrell.com/development/sphinx-docs-theme
+    :alt: Sphinx docs theme development documentation
 
 Features
 --------
