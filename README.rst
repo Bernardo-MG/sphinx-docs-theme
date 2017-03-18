@@ -12,14 +12,14 @@ which will be the visual reference to be followed by this project.
 
 .. image:: https://badge.fury.io/py/sphinx-docs-theme.svg
     :target: https://pypi.python.org/pypi/sphinx-docs-theme
-    :alt: CWR-API Pypi package page
+    :alt: Sphinx docs theme Pypi package page
 
-.. image:: https://readthedocs.org/projects/sphinx-docs-theme/badge/?version=latest
-    :target: http://sphinx-docs-theme.readthedocs.org/en/latest/
-    :alt: Cookiecutter Python Library latest documentation Status
-.. image:: https://readthedocs.org/projects/sphinx-docs-theme/badge/?version=develop
-    :target: http://sphinx-docs-theme.readthedocs.org/en/develop/
-    :alt: Cookiecutter Python Library development documentation Status
+.. image:: https://img.shields.io/badge/docs-release-blue.svg
+    :target: http://docs.wandrell.com/dice-notation-python
+    :alt: Dice Notation Tools for Python latest documentation
+.. image:: https://img.shields.io/badge/docs-develop-blue.svg
+    :target: http://docs.wandrell.com/development/dice-notation-python
+    :alt: Dice Notation Tools for Python development documentation
 
 Features
 --------
