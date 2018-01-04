@@ -5,36 +5,50 @@
 language: python
 python:
   - "2.7"
-  - "3.3"
   - "3.4"
-  # Python 3.5 is set to test and deploy the docs in the configuration matrix
-  #- "3.5"
+  - "3.5"
+  # Python 3.6 is set to test and deploy the docs in the configuration matrix
+  #- "3.6"
+  # PyPy currently is not working with the required dependencies
+  #- "pypy"
+  #- "pypy3"
 env:
   - TEST_DOCS=true
 matrix:
   include:
-    - python: "3.5"
-      env: TEST_DOCS=true DEPLOY_DOCS=true
+    # Tests and deploys docs, also runs coverage report
+    - python: "3.6"
+      env: COVERAGE=true TEST_DOCS=true DEPLOY_DOCS=true
+addons:
+  apt:
+    packages:
+    - sshpass
 
 before_install:
   # Gets scripts
-  - git clone -b v0.2.0 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
+  - git clone -b v1.1.3 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
   # Sets scripts as executable
   - chmod -R +x ~/.scripts/*
   # Prepares CI environment
   - source ~/.scripts/travis/load-travis-environment.sh
+  - source ~/.scripts/travis/load-travis-environment-python.sh
 install:
   # tox is required for the tests
   - pip install tox
-  # Recess
-  - npm install -g recess
+  # sphinx is required for the docs
+  - pip install sphinx
+  # Dependencies
+  - pip install --upgrade -r requirements.txt
 script:
-  # JS is verified
-  - ~/.scripts/python/run_tests.sh true js
-  # CSS is verified
-  - recess ./sphinx_docs_theme/static/css/*
+  # Code is checked
+  - ~/.scripts/python/run_tests.sh true check
+  # Tests are run
+  - ~/.scripts/python/run_tests.sh true $PYTHON_VERSION_TEST
   # Documentation tests are run
   - ~/.scripts/python/run_tests.sh $DO_TEST_DOCS docs
 after_success:
   # Documentation deployment
-  - ~/.scripts/rtd/deploy.sh $DO_DEPLOY_DOCS sphinx-docs-theme
+  - ~/.scripts/sphinx/build-html.sh $DO_DEPLOY_DOCS docs
+  - cd ~/sphinx/build/html
+  - ~/.scripts/deploy/deploy-ssh.sh $DO_DEPLOY_DOCS_RELEASE $DEPLOY_DOCS_USERNAME $DEPLOY_DOCS_PASSWORD $DEPLOY_DOCS_HOST $DEPLOY_DOCS_PORT $DEPLOY_DOCS_PATH_RELEASE
+  - ~/.scripts/deploy/deploy-ssh.sh $DO_DEPLOY_DOCS_DEVELOP $DEPLOY_DOCS_USERNAME $DEPLOY_DOCS_PASSWORD $DEPLOY_DOCS_HOST $DEPLOY_DOCS_PORT $DEPLOY_DOCS_PATH_DEVELOP

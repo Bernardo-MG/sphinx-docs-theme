@@ -12,14 +12,14 @@ which will be the visual reference to be followed by this project.
 
 .. image:: https://badge.fury.io/py/sphinx-docs-theme.svg
     :target: https://pypi.python.org/pypi/sphinx-docs-theme
-    :alt: CWR-API Pypi package page
+    :alt: Sphinx docs theme Pypi package page
 
-.. image:: https://readthedocs.org/projects/sphinx-docs-theme/badge/?version=latest
-    :target: http://sphinx-docs-theme.readthedocs.org/en/latest/
-    :alt: Cookiecutter Python Library latest documentation Status
-.. image:: https://readthedocs.org/projects/sphinx-docs-theme/badge/?version=develop
-    :target: http://sphinx-docs-theme.readthedocs.org/en/develop/
-    :alt: Cookiecutter Python Library development documentation Status
+.. image:: https://img.shields.io/badge/docs-release-blue.svg
+    :target: http://docs.bernardomg.com/sphinx-docs-theme
+    :alt: Sphinx docs theme latest documentation
+.. image:: https://img.shields.io/badge/docs-develop-blue.svg
+    :target: http://docs.bernardomg.com/development/sphinx-docs-theme
+    :alt: Sphinx docs theme development documentation
 
 Features
 --------
@@ -47,7 +47,7 @@ documentation sites:
 - The `development docs`_ are generated from the latest code in the 'develop' branch
 
 You can also create the documentation from the source files, kept in the 'docs'
-folder, with the help of Sphinx. For this use the makefile, or the make.bat
+folder, with the help of `Sphinx`_. For this use the makefile, or the make.bat
 file, contained on that folder.
 
 Usage
@@ -145,8 +145,8 @@ The project has been released under the `MIT License`_.
 .. _Sphinx: http://sphinx-doc.org/
 .. _GitHub project page: https://github.com/Bernardo-MG/sphinx-docs-theme
 .. _project issues tracker: https://github.com/Bernardo-MG/sphinx-docs-theme/issues
-.. _latest docs: http://sphinx-docs-theme.readthedocs.org/en/latest/
-.. _development docs: http://sphinx-docs-theme.readthedocs.org/en/develop/
+.. _latest docs: http://docs.bernardomg.com/sphinx-docs-theme
+.. _development docs: http://docs.bernardomg.com/development/sphinx-docs-theme
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
 

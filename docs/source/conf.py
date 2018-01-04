@@ -100,7 +100,7 @@ html_theme_options = {
     'keywords': 'Sphinx, theme, Bootstrap, HTML5, documentation',
     'author_name': ','.join(authors),
     'author_url': 'https://github.com/Bernardo-MG',
-    'twitter_id': '@Wandrell_BMG',
+    'twitter_id': '@BernardoMartG',
     'publish_date': datetime.datetime.now().date(),
     'years': '2015-%s' % datetime.datetime.now().year,
     'scm_name': 'Github',

@@ -5,11 +5,11 @@ import os
     Docs Sphinx Theme
     ~~~~~~~~~~~~~~~~~
     Sphinx Theme for documentation sites
-    :copyright: (c) 2015-2016 by Bernardo Martínez Garrido
+    :copyright: (c) 2015-2018 by Bernardo Martínez Garrido
     :license: MIT, see LICENSE for more details.
 """
 
-__version__ = '0.2.3'
+__version__ = '0.2.4'
 __license__ = 'MIT'
 
 
