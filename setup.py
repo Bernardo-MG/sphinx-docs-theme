@@ -64,7 +64,7 @@ setup(
     version=version_lib,
     description='Sphinx Theme for documentation sites.',
     author='Bernardo Martínez Garrido',
-    author_email='programming@wandrell.com',
+    author_email='programming@bernardomg.com',
     license='MIT',
     url='https://github.com/Bernardo-MG/sphinx_docs_theme',
     download_url='https://github.com/Bernardo-MG/sphinx_docs_theme',

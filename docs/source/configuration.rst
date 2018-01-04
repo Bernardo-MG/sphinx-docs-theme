@@ -59,7 +59,7 @@ Metadata variables
 Variable   Usage                                        Example
 ========== ============================================ =======
 keywords   Content for the keywords field on the header 'Sphinx, theme, Bootstrap, documentation'
-twitter_id Id for the twitter card on the header        '@wandrell'
+twitter_id Id for the twitter card on the header        '@BernardoMartG'
 ========== ============================================ =======
 
 -----------
