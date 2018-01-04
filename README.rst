@@ -15,10 +15,10 @@ which will be the visual reference to be followed by this project.
     :alt: Sphinx docs theme Pypi package page
 
 .. image:: https://img.shields.io/badge/docs-release-blue.svg
-    :target: http://docs.wandrell.com/sphinx-docs-theme
+    :target: http://docs.bernardomg.com/sphinx-docs-theme
     :alt: Sphinx docs theme latest documentation
 .. image:: https://img.shields.io/badge/docs-develop-blue.svg
-    :target: http://docs.wandrell.com/development/sphinx-docs-theme
+    :target: http://docs.bernardomg.com/development/sphinx-docs-theme
     :alt: Sphinx docs theme development documentation
 
 Features
@@ -145,8 +145,8 @@ The project has been released under the `MIT License`_.
 .. _Sphinx: http://sphinx-doc.org/
 .. _GitHub project page: https://github.com/Bernardo-MG/sphinx-docs-theme
 .. _project issues tracker: https://github.com/Bernardo-MG/sphinx-docs-theme/issues
-.. _latest docs: http://docs.wandrell.com/sphinx-docs-theme
-.. _development docs: http://docs.wandrell.com/development/sphinx-docs-theme
+.. _latest docs: http://docs.bernardomg.com/sphinx-docs-theme
+.. _development docs: http://docs.bernardomg.com/development/sphinx-docs-theme
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
 
