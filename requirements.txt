@@ -2,7 +2,7 @@
 Sphinx==1.5.3
 
 # Installation and deployment
-setuptools==26.1.1
+setuptools==38.2.5
 twine==1.8.1
 
 # Documentation
