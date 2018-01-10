@@ -3,7 +3,7 @@ import io
 from os.path import dirname
 from os.path import join
 
-from setuptools import find_packages, setup
+from setuptools import find_packages, setup, Command
 
 from tox_test_command import ToxTestCommand
 from version_extractor import extract_version_init
@@ -30,6 +30,28 @@ def read(*names, **kwargs):
         join(dirname(__file__), *names),
         encoding=kwargs.get('encoding', 'utf8')
     ).read()
+
+
+class FrontendCommand(Command):
+    """
+    Frontend building command.
+    """
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        import subprocess
+
+        subprocess.check_call('npm run copy-bootstrap', shell=True)
+        subprocess.check_call('npm run copy-bootswatch', shell=True)
+        subprocess.check_call('npm run copy-fontawesome', shell=True)
+        subprocess.check_call('npm run copy-html5shiv', shell=True)
+        subprocess.check_call('npm run copy-jquery', shell=True)
 
 
 setup(
@@ -71,6 +93,7 @@ setup(
     tests_require=_tests_require,
     extras_require={'test': _tests_require},
     cmdclass={
+        'frontend': FrontendCommand,
         'test': ToxTestCommand
     },
 )

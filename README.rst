@@ -77,7 +77,13 @@ to install it. For this use the following command;
 
 ``$ pip install sphinx-docs-theme``
 
-If needed, manual installation is possible:
+If needed, manual installation is possible. But it requires two steps.
+
+First of all the frontend should be built:
+
+``$ python setup.py frontend``
+
+And then the project can be installed:
 
 ``$ python setup.py install``
 
