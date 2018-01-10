@@ -69,6 +69,10 @@ target/
 .idea_modules/
 out/
 
+# Node
+/node_modules/
+package-lock.json
+
 # Dependencies
 sphinx_docs_theme/static/lib/bootstrap
 sphinx_docs_theme/static/lib/bootswatch
