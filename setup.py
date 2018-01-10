@@ -47,6 +47,8 @@ class FrontendCommand(Command):
     def run(self):
         import subprocess
 
+        subprocess.check_call('npm install', shell=True)
+
         subprocess.check_call('npm run copy-bootstrap', shell=True)
         subprocess.check_call('npm run copy-bootswatch', shell=True)
         subprocess.check_call('npm run copy-fontawesome', shell=True)
