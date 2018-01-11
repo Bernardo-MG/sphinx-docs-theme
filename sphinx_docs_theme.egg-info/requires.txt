@@ -1,5 +1,0 @@
-Fabric
-Sphinx
-
-[test]
-tox
