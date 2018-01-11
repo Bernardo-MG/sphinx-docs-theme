@@ -3,6 +3,7 @@ include LICENSE
 include README.rst
 include tox.ini
 include requirements.txt
+include package.json
 
 # Theme
 recursive-include sphinx_docs_theme *
