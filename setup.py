@@ -4,6 +4,7 @@ from os.path import dirname
 from os.path import join
 
 from setuptools import find_packages, setup, Command
+from setuptools.command.install import install
 
 from tox_test_command import ToxTestCommand
 from version_extractor import extract_version_init
@@ -56,6 +57,22 @@ class FrontendCommand(Command):
         subprocess.check_call('npm run copy-jquery', shell=True)
 
 
+class InstallWithFrontend(install):
+
+    def run(self):
+        import subprocess
+
+        subprocess.check_call('npm install', shell=True)
+
+        subprocess.check_call('npm run copy-bootstrap', shell=True)
+        subprocess.check_call('npm run copy-bootswatch', shell=True)
+        subprocess.check_call('npm run copy-fontawesome', shell=True)
+        subprocess.check_call('npm run copy-html5shiv', shell=True)
+        subprocess.check_call('npm run copy-jquery', shell=True)
+
+        self.do_egg_install()
+
+
 setup(
     name='sphinx-docs-theme',
     packages=find_packages(),
@@ -96,6 +113,7 @@ setup(
     extras_require={'test': _tests_require},
     cmdclass={
         'frontend': FrontendCommand,
+        'install': InstallWithFrontend,
         'test': ToxTestCommand
     },
 )
