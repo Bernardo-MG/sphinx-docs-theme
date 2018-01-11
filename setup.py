@@ -59,16 +59,12 @@ class FrontendCommand(Command):
 
 class InstallWithFrontend(install):
 
+    def __init__(self, dist, **kw):
+        super().__init__(dist, **kw)
+        self.frontend_command = FrontendCommand(dist, **kw)
+
     def run(self):
-        import subprocess
-
-        subprocess.check_call('npm install', shell=True)
-
-        subprocess.check_call('npm run copy-bootstrap', shell=True)
-        subprocess.check_call('npm run copy-bootswatch', shell=True)
-        subprocess.check_call('npm run copy-fontawesome', shell=True)
-        subprocess.check_call('npm run copy-html5shiv', shell=True)
-        subprocess.check_call('npm run copy-jquery', shell=True)
+        self.frontend_command.run()
 
         self.do_egg_install()
 
