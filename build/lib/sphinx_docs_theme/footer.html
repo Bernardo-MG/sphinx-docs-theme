@@ -1,0 +1,73 @@
+<footer class="footer">
+    <div class="footer-content">
+        <div class="container-fluid">
+            <div id="navbar-footer" class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <dl class="dl-nav">
+                        {% if theme_general_info_links %}
+                        <dt>General Info</dt>
+                        {% for link in theme_general_info_links %}
+                        <dd><a href="{{ pathto(link[1], 1) }}">{{ link[0] }}</a>
+                        </dd>
+                        {% endfor %}
+                        {% endif %}
+                    </dl>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <dl class="dl-nav">
+                        {% if theme_scm_name and theme_scm_url %}
+                        <dt>Code</dt>
+                        <dd><a id="scm-link" href="{{ theme_scm_url }}"
+                               class="link-noted">SCM <span
+                                class="note">{{ theme_scm_name }}</span></a>
+                        </dd>
+                        {% endif %}
+                        {% if theme_ci_name and theme_ci_url %}
+                        <dd><a id="ci-link" href="{{ theme_ci_url }}"
+                               class="link-noted">CI <span class="note">{{ theme_ci_name }}</span></a>
+                        </dd>
+                        {% endif %}
+                        {% if theme_issues_name and theme_issues_url %}
+                        <dd><a id="issues-link"
+                               href="{{ theme_issues_url }}"
+                               class="link-noted">Issues <span
+                                class="note">{{ theme_issues_name }}</span></a>
+                        </dd>
+                        {% endif %}
+                    </dl>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    {% if theme_releases_repos %}
+                    <dl class="dl-nav">
+                        <dt>Releases</dt>
+                        {% for repo in theme_releases_repos %}
+                        <dd><a href="{{ repo[1] }}">{{ repo[0] }}</a>
+                        </dd>
+                        {% endfor %}
+                    </dl>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12"><span
+                        class="fa fa-copyright"></span>{% if theme_years %}
+                    {{ theme_years }}
+                    {% endif %}<a id="author-link"
+                                  href="{{ theme_author_url }}">{{
+                        theme_author_name }}</a> - {% if theme_license_name and
+                    theme_license_url %}
+                    <a id="license-link"
+                       href="{{ theme_license_url }}">{{
+                        theme_license_name }}
+                        License</a></div>
+                {% endif %}
+                <div class="col-md-12 col-sm-12 col-xs-12">Powered by <a
+                        href="http://sphinx-doc.org/">Sphinx</a> {{
+                    sphinx_version }} and the <a
+                            href="https://github.com/Bernardo-MG/sphinx-docs-theme">Sphinx
+                        Docs Theme</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
