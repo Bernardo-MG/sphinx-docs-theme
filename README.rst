@@ -46,9 +46,11 @@ documentation sites:
 - The `latest docs`_ are always generated for the latest release, kept in the 'master' branch
 - The `development docs`_ are generated from the latest code in the 'develop' branch
 
-You can also create the documentation from the source files, kept in the 'docs'
-folder, with the help of `Sphinx`_. For this use the makefile, or the make.bat
-file, contained on that folder.
+The source files for the docs, a small `Sphinx`_ project, are kept in the 'docs folder.
+
+These can be built if needed:
+
+``$ python setup.py build_docs``
 
 Usage
 -----
@@ -63,11 +65,18 @@ Prerequisites
 into a Sphinx project. To find more information about this check its webpage,
 which will also tell which Python interpreters can be used.
 
-All other dependencies are indicated on the requirements.txt file.
+All other Python dependencies are indicated on the requirements.txt file.
 
-These can be installed with:
+These dependencies can be installed with:
 
 ``$ pip install --upgrade -r requirements.txt``
+
+The frontend libraries are defined as `npm`_ dependencies, and require this package
+manager to be defined.
+
+These dependencies can be installed with:
+
+``$ python setup.py frontend``
 
 Installing
 ~~~~~~~~~~
@@ -77,13 +86,7 @@ to install it. For this use the following command;
 
 ``$ pip install sphinx-docs-theme``
 
-If needed, manual installation is possible. But it requires two steps.
-
-First of all the frontend should be built:
-
-``$ python setup.py frontend``
-
-And then the project can be installed:
+If needed, manual installation is possible:
 
 ``$ python setup.py install``
 
@@ -153,6 +156,8 @@ The project has been released under the `MIT License`_.
 .. _development docs: http://docs.bernardomg.com/development/sphinx-docs-theme
 .. _Pypi package: https://pypi.python.org/pypi/sphinx-docs-theme
 .. _MIT License: http://www.opensource.org/licenses/mit-license.php
+
+.. _npm: https://www.npmjs.com/
 
 .. _HTML5: http://www.w3.org/TR/html5/
 .. _Bootstrap 3: http://getbootstrap.com
