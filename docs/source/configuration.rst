@@ -58,8 +58,8 @@ Metadata variables
 ========== ============================================ =======
 Variable   Usage                                        Example
 ========== ============================================ =======
-keywords   Content for the keywords field on the header 'Sphinx, theme, Bootstrap, documentation'
-twitter_id Id for the twitter card on the header        '@BernardoMartG'
+keywords   Content for the keywords field on the header Sphinx, theme, Bootstrap, documentation
+twitter_id Id for the twitter card on the header        @BernardoMartG
 ========== ============================================ =======
 
 -----------
@@ -80,10 +80,10 @@ Release info
 ============== =================================================================== =======
 Variable       Usage                                                               Example
 ============== =================================================================== =======
-years          The years range in which the project was published, as a string     '2014-2015'
+years          The years range in which the project was published, as a string     2014-2015
 publish_date   Date in which the Sphinx-created page has been published            datetime.datetime.now().date()
-license_name   Name of the license under which the project has been released       'MIT'
-license_url    URL for the license                                                 'http://www.opensource.org/licenses/mit-license.php'
+license_name   Name of the license under which the project has been released       MIT
+license_url    URL for the license                                                 http://www.opensource.org/licenses/mit-license.php
 ============== =================================================================== =======
 
 -----------------
