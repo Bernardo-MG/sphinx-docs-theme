@@ -7,6 +7,7 @@ from setuptools import find_packages, setup, Command
 from setuptools.command.install import install
 
 from tox_test_command import ToxTestCommand
+from sphinx.setup_command import BuildDoc
 from version_extractor import extract_version_init
 
 
@@ -108,6 +109,7 @@ setup(
     tests_require=_tests_require,
     extras_require={'test': _tests_require},
     cmdclass={
+        'build_docs': BuildDoc,
         'frontend': FrontendCommand,
         'install': InstallWithFrontend,
         'test': ToxTestCommand
