@@ -15,14 +15,11 @@
         </div>
 
         <div id="navbar-main-body" class="navbar-body navbar-collapse collapse">
-            <small class="navbar-text">{{ version }}{% if theme_publish_date %}
-                (<time>{{ theme_publish_date }}{% endif %}</time>)
-            </small>
+            <small class="navbar-text">{{ version }}{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <ul class="list-unstyled icons-list">
-                        {% if theme_scm_url and theme_scm_name|string() ==
-                        'Github' %}
+                        {% if theme_scm_url and theme_scm_name|string() == 'Github' %}
                         <li><a href="{{ theme_scm_url }}" title="GitHub"
                                aria-label="GitHub"><span
                                 class="navbar-icon fa fa-github"
@@ -38,8 +35,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">{{ link_group[0] }}
-                        <span class="chevron_toggleable fa fa-chevron-up"
-                              aria-hidden="true"></span>
+                        <span class="chevron_toggleable fa fa-chevron-up" aria-hidden="true"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         {% for link in link_group[1] %}
