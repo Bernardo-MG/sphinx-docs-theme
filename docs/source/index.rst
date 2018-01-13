@@ -26,6 +26,7 @@ The main features offered by the theme are:
    usage
    configuration
    other_config
+   development
 
 .. _HTML5: http://www.w3.org/TR/html5/
 .. _Bootstrap 3: http://getbootstrap.com

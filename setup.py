@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
-import ast
-import re
-import sys
 import io
 from os.path import dirname
 from os.path import join
-from codecs import open
 
-from setuptools import find_packages, setup
-from setuptools.command.test import test as test_command
+from setuptools import find_packages, setup, Command
+from setuptools.command.install import install
+
+from tox_test_command import ToxTestCommand
+from sphinx.setup_command import BuildDoc
+from version_extractor import extract_version_init
+
 
 """
 PyPI configuration module.
@@ -18,8 +19,8 @@ This is prepared for easing the generation of deployment files.
 
 __license__ = 'MIT'
 
-# Regular expression for the version
-_version_re = re.compile(r'__version__\s+=\s+(.*)')
+# Source package
+_source_package = 'sphinx_docs_theme/'
 
 # Test requirements
 _tests_require = ['tox']
@@ -32,27 +33,41 @@ def read(*names, **kwargs):
         encoding=kwargs.get('encoding', 'utf8')
     ).read()
 
-# Gets the version for the source folder __init__.py file
-with open('sphinx_docs_theme/__init__.py', 'rb',
-          encoding='utf-8') as f:
-    version_lib = f.read()
-    version_lib = _version_re.search(version_lib).group(1)
-    version_lib = str(ast.literal_eval(version_lib.rstrip()))
 
+class FrontendCommand(Command):
+    """
+    Frontend building command.
+    """
+    user_options = []
 
-# For running tox tests
-class _ToxTester(test_command):
+    def initialize_options(self):
+        pass
+
     def finalize_options(self):
-        test_command.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
+        pass
 
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import tox
+    def run(self):
+        import subprocess
 
-        errcode = tox.cmdline(self.test_args)
-        sys.exit(errcode)
+        subprocess.check_call('npm install', shell=True)
+
+        subprocess.check_call('npm run copy-bootstrap', shell=True)
+        subprocess.check_call('npm run copy-bootswatch', shell=True)
+        subprocess.check_call('npm run copy-fontawesome', shell=True)
+        subprocess.check_call('npm run copy-html5shiv', shell=True)
+        subprocess.check_call('npm run copy-jquery', shell=True)
+
+
+class InstallWithFrontend(install):
+
+    def __init__(self, dist, **kw):
+        super().__init__(dist, **kw)
+        self.frontend_command = FrontendCommand(dist, **kw)
+
+    def run(self):
+        self.frontend_command.run()
+
+        self.do_egg_install()
 
 
 setup(
@@ -61,7 +76,7 @@ setup(
     include_package_data=True,
     package_data={
     },
-    version=version_lib,
+    version=extract_version_init(_source_package),
     description='Sphinx Theme for documentation sites.',
     author='Bernardo Martínez Garrido',
     author_email='programming@bernardomg.com',
@@ -78,8 +93,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
@@ -95,5 +108,10 @@ setup(
     ],
     tests_require=_tests_require,
     extras_require={'test': _tests_require},
-    cmdclass={'test': _ToxTester},
+    cmdclass={
+        'build_docs': BuildDoc,
+        'frontend': FrontendCommand,
+        'install': InstallWithFrontend,
+        'test': ToxTestCommand
+    },
 )
