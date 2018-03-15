@@ -10,7 +10,7 @@
     {% if favicon %}
     <link href="{{ pathto(favicon) }}" rel="shortcut icon" type="image/x-icon"/>
     {% else %}
-    <link href="{{ pathto('./_static/favicon.ico', 1) }}" rel="shortcut icon" type="image/x-icon"/>
+    <link href="{{ pathto('./static/favicon.ico', 1) }}" rel="shortcut icon" type="image/x-icon"/>
     {% endif %}
 
     <!-- Metadata -->
@@ -39,15 +39,15 @@
     {% endif %}
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ pathto('./_static/lib/bootswatch/readable/bootstrap.min.css', 1) }}">
-    <link rel="stylesheet" href="{{ pathto('./_static/lib/font-awesome/css/font-awesome.min.css', 1) }}">
-    <link rel="stylesheet" href="{{ pathto('./_static/lib/highlight/styles/default.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('./static/lib/bootswatch/readable/bootstrap.min.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('./static/lib/font-awesome/css/font-awesome.min.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('./static/lib/highlight/styles/default.css', 1) }}">
     <!-- Docs Template style -->
-    <link rel="stylesheet" href="{{ pathto('./_static/css/style.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('./static/css/style.css', 1) }}">
 
     <!-- HTML5 Shiv. For IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="{{ pathto('./_static/lib/html5shiv/html5shiv.min.js', 1) }}"></script>
+    <script src="{{ pathto('./static/lib/html5shiv/html5shiv.min.js', 1) }}"></script>
     <![endif]-->
 
 </head>
