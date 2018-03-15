@@ -1,10 +1,10 @@
 {
    "scripts": {
-      "copy-bootstrap": "cpx \"node_modules/bootstrap/dist/js/*.js\" sphinx_docs_theme/static/lib/bootstrap/js",
-      "copy-bootswatch": "cpx \"node_modules/bootswatch/readable/*.css\" sphinx_docs_theme/static/lib/bootswatch/readable",
-      "copy-fontawesome": "cpx \"node_modules/font-awesome/**/*\" sphinx_docs_theme/static/lib/font-awesome",
-      "copy-html5shiv": "cpx \"node_modules/html5shiv/dist/*.css\" sphinx_docs_theme/static/lib/html5shiv",
-      "copy-jquery": "cpx \"node_modules/jquery/dist/*.js\" sphinx_docs_theme/static/lib/jquery"
+      "copy-bootstrap": "cpx \"node_modules/bootstrap/dist/js/*.js\" sphinx_docs_theme/_static/lib/bootstrap/js",
+      "copy-bootswatch": "cpx \"node_modules/bootswatch/readable/*.css\" sphinx_docs_theme/_static/lib/bootswatch/readable",
+      "copy-fontawesome": "cpx \"node_modules/font-awesome/**/*\" sphinx_docs_theme/_static/lib/font-awesome",
+      "copy-html5shiv": "cpx \"node_modules/html5shiv/dist/*.css\" sphinx_docs_theme/_static/lib/html5shiv",
+      "copy-jquery": "cpx \"node_modules/jquery/dist/*.js\" sphinx_docs_theme/_static/lib/jquery"
    },
    "devDependencies": {
       "bootstrap": "~3.3.7",
