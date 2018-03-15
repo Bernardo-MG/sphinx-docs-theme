@@ -627,7 +627,7 @@ New languages:
 
 [Hakan Özler]: https://github.com/ozlerhakan
 [Adam Joseph Cook]: https://github.com/adamjcook
-[demo page]: https://highlightjs.org/static/demo/
+[demo page]: https://highlightjs.org/_static/demo/
 [Ivan Sagalaev]: https://github.com/isagalaev
 [Edwin Dalorzo]: https://github.com/edalorzo
 [mucaho]: https://github.com/mucaho
@@ -700,7 +700,7 @@ demo web app. If you're confident front-end developer or designer and want to
 help us with it, drop a comment into [the issue][#542] on GitHub.
 
 [test]: https://github.com/isagalaev/highlight.js/tree/master/test
-[demo]: https://highlightjs.org/static/test.html
+[demo]: https://highlightjs.org/_static/test.html
 [#542]: https://github.com/isagalaev/highlight.js/issues/542
 [ci]: https://travis-ci.org/isagalaev/highlight.js
 [Jeremy Hull]: https://github.com/sourrust

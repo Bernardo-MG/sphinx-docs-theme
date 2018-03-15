@@ -7,6 +7,9 @@ include package.json
 
 # Theme
 recursive-include sphinx_docs_theme *
+recursive-include sphinx_docs_theme *.css
+recursive-include sphinx_docs_theme *.html
+recursive-include sphinx_docs_theme *.js
 recursive-exclude sphinx_docs_theme *.pyc
 recursive-exclude sphinx_docs_theme *.pyo
 
