@@ -3,4 +3,4 @@ Sphinx==1.6.5
 
 # Documentation
 Pygments==2.2.0
-sphinx-docs-theme==0.3.1
+sphinx-docs-theme==0.3.2
