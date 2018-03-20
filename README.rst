@@ -2,13 +2,13 @@
 Sphinx Docs Theme
 =================
 
-A minimalist Bootstrap-based HTML5 theme for Sphinx, will help to use it as a
-documentation site.
+A minimalist Bootstrap-based HTML5 theme for Sphinx. For generating
+documentation sites.
 
-Check the `latest docs`_ to find out how to set it up for your Sphinx project.
+Check the `latest docs`_ to find out how to set it up.
 
 The skin has been adapted from the static template `Docs Bootstrap Template`_,
-which will be the visual reference to be followed by this project.
+and it is the visual reference to be followed by the project.
 
 .. image:: https://badge.fury.io/py/sphinx-docs-theme.svg
     :target: https://pypi.python.org/pypi/sphinx-docs-theme
