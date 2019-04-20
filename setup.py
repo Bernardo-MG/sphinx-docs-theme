@@ -49,13 +49,15 @@ class FrontendCommand(Command):
     def run(self):
         import subprocess
 
+        # Installs dependencies
         subprocess.check_call('npm install', shell=True)
 
-        subprocess.check_call('npm run copy-bootstrap', shell=True)
-        subprocess.check_call('npm run copy-bootswatch', shell=True)
-        subprocess.check_call('npm run copy-fontawesome', shell=True)
-        subprocess.check_call('npm run copy-html5shiv', shell=True)
-        subprocess.check_call('npm run copy-jquery', shell=True)
+        # Copies libraries
+        subprocess.check_call('npm run copy-all', shell=True)
+
+        # Minifies files
+        subprocess.check_call('npm run minify-css', shell=True)
+        subprocess.check_call('npm run minify-js', shell=True)
 
 
 class InstallWithFrontend(install):
