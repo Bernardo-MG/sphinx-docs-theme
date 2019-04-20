@@ -10,6 +10,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -79,3 +80,7 @@ sphinx_docs_theme/static/lib/bootstrap
 sphinx_docs_theme/static/lib/bootswatch
 sphinx_docs_theme/static/lib/font-awesome
 sphinx_docs_theme/static/lib/jquery
+
+# Minified
+sphinx_docs_theme/static/**/*.min.js
+sphinx_docs_theme/static/**/*.min.css
