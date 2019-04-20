@@ -5,7 +5,9 @@
       "copy-fontawesome": "cpx \"node_modules/font-awesome/**/*\" sphinx_docs_theme/static/lib/font-awesome",
       "copy-html5shiv": "cpx \"node_modules/html5shiv/dist/*.css\" sphinx_docs_theme/static/lib/html5shiv",
       "copy-jquery": "cpx \"node_modules/jquery/dist/*.js\" sphinx_docs_theme/static/lib/jquery",
-      "copy-all": "run-s copy-bootstrap copy-bootswatch copy-fontawesome copy-html5shiv copy-jquery"
+      "copy-all": "run-s copy-bootstrap copy-bootswatch copy-fontawesome copy-html5shiv copy-jquery",
+      "minify-css": "./node_modules/.bin/cleancss ./src/main/resources/css/*.css -o sphinx_docs_theme/static/css/style.min.css",
+      "minify-js": "./node_modules/.bin/uglifyjs ./src/main/resources/js/utils/*.js -o sphinx_docs_theme/static/js/scripts.min.js"
    },
    "devDependencies": {
       "bootstrap": "~3.4.1",
@@ -16,6 +18,7 @@
       "html5shiv": "~3.7.3",
       "jquery": "~3.3.1",
       "jshint": "~2.10.2",
-      "npm-run-all": "~4.1.5"
+      "npm-run-all": "~4.1.5",
+      "uglify-js": "~3.4.9"
    }
 }

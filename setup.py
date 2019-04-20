@@ -52,6 +52,8 @@ class FrontendCommand(Command):
         subprocess.check_call('npm install', shell=True)
 
         subprocess.check_call('npm run copy-all', shell=True)
+        subprocess.check_call('npm run minify-css', shell=True)
+        subprocess.check_call('npm run minify-js', shell=True)
 
 
 class InstallWithFrontend(install):
