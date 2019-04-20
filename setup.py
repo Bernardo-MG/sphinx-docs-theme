@@ -83,8 +83,8 @@ setup(
     author='Bernardo Martínez Garrido',
     author_email='programming@bernardomg.com',
     license='MIT',
-    url='https://github.com/Bernardo-MG/sphinx_docs_theme',
-    download_url='https://github.com/Bernardo-MG/sphinx_docs_theme',
+    url='https://github.com/Bernardo-MG/sphinx-docs-theme',
+    download_url='https://github.com/Bernardo-MG/sphinx-docs-theme',
     keywords=['sphinx', 'theme', 'bootstrap', 'html5', 'python'],
     platforms='any',
     classifiers=[
