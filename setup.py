@@ -49,9 +49,13 @@ class FrontendCommand(Command):
     def run(self):
         import subprocess
 
+        # Installs dependencies
         subprocess.check_call('npm install', shell=True)
 
+        # Copies libraries
         subprocess.check_call('npm run copy-all', shell=True)
+
+        # Minifies files
         subprocess.check_call('npm run minify-css', shell=True)
         subprocess.check_call('npm run minify-js', shell=True)
 
