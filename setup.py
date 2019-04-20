@@ -51,11 +51,7 @@ class FrontendCommand(Command):
 
         subprocess.check_call('npm install', shell=True)
 
-        subprocess.check_call('npm run copy-bootstrap', shell=True)
-        subprocess.check_call('npm run copy-bootswatch', shell=True)
-        subprocess.check_call('npm run copy-fontawesome', shell=True)
-        subprocess.check_call('npm run copy-html5shiv', shell=True)
-        subprocess.check_call('npm run copy-jquery', shell=True)
+        subprocess.check_call('npm run copy-all', shell=True)
 
 
 class InstallWithFrontend(install):
