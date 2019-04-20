@@ -6,8 +6,8 @@
       "copy-html5shiv": "cpx \"node_modules/html5shiv/dist/*.css\" sphinx_docs_theme/static/lib/html5shiv",
       "copy-jquery": "cpx \"node_modules/jquery/dist/*.js\" sphinx_docs_theme/static/lib/jquery",
       "copy-all": "run-s copy-bootstrap copy-bootswatch copy-fontawesome copy-html5shiv copy-jquery",
-      "minify-css": "./node_modules/.bin/cleancss ./src/main/resources/css/*.css -o sphinx_docs_theme/static/css/style.min.css",
-      "minify-js": "./node_modules/.bin/uglifyjs ./src/main/resources/js/utils/*.js -o sphinx_docs_theme/static/js/scripts.min.js"
+      "minify-css": "./node_modules/.bin/cleancss sphinx_docs_theme/static/css/*.css -o sphinx_docs_theme/static/css/style.min.css",
+      "minify-js": "./node_modules/.bin/uglifyjs sphinx_docs_theme/static/js/utils/*.js -o sphinx_docs_theme/static/js/scripts.min.js"
    },
    "devDependencies": {
       "bootstrap": "~3.4.1",
