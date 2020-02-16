@@ -57,7 +57,6 @@ class FrontendCommand(Command):
 
         # Minifies files
         subprocess.check_call('npm run minify-css', shell=True)
-        subprocess.check_call('npm run minify-js', shell=True)
 
 
 class InstallWithFrontend(install):
