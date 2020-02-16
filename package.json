@@ -1,24 +1,20 @@
 {
    "scripts": {
-      "copy-bootstrap": "cpx \"node_modules/bootstrap/dist/js/*.js\" sphinx_docs_theme/static/lib/bootstrap/js",
-      "copy-bootswatch": "cpx \"node_modules/bootswatch/readable/*.css\" sphinx_docs_theme/static/lib/bootswatch/readable",
-      "copy-fontawesome": "cpx \"node_modules/font-awesome/**/*\" sphinx_docs_theme/static/lib/font-awesome",
-      "copy-html5shiv": "cpx \"node_modules/html5shiv/dist/*.css\" sphinx_docs_theme/static/lib/html5shiv",
-      "copy-jquery": "cpx \"node_modules/jquery/dist/*.js\" sphinx_docs_theme/static/lib/jquery",
-      "copy-all": "run-s copy-bootstrap copy-bootswatch copy-fontawesome copy-html5shiv copy-jquery",
-      "minify-css": "./node_modules/.bin/cleancss sphinx_docs_theme/static/css/*.css -o sphinx_docs_theme/static/css/style.min.css",
-      "minify-js": "./node_modules/.bin/uglifyjs sphinx_docs_theme/static/js/utils/*.js -o sphinx_docs_theme/static/js/scripts.min.js"
+      "copy-bootstrap": "copyfiles -u 4 \"./node_modules/bootstrap/dist/js/*.js\" ./sphinx_docs_theme/static/lib/bootstrap/js",
+      "copy-bootswatch": "copyfiles -u 4 \"./node_modules/bootswatch/dist/litera/*.css\" ./sphinx_docs_theme/static/lib/bootswatch/readable",
+      "copy-fontawesome": "copyfiles -u 2 \",./node_modules/font-awesome/**/*\" ./sphinx_docs_theme/static/lib/font-awesome",
+      "copy-html5shiv": "copyfiles -u 3 \"./node_modules/html5shiv/dist/*.css\" ./sphinx_docs_theme/static/lib/html5shiv",
+      "copy-jquery": "copyfiles -u 3 \"./node_modules/jquery/dist/*.js\" ./sphinx_docs_theme/static/lib/jquery",
+      "copy-all": "npm run copy-bootstrap && npm run copy-bootswatch && npm run copy-fontawesome && npm run copy-html5shiv && npm run copy-jquery",
+      "minify-css": "./node_modules/.bin/cleancss sphinx_docs_theme/static/css/*.css -o ./sphinx_docs_theme/static/css/style.min.css"
    },
    "devDependencies": {
-      "bootstrap": "~3.4.1",
-      "bootswatch": "~3.4.1",
+      "bootstrap": "~4.4.1",
+      "bootswatch": "~4.4.1",
       "clean-css-cli": "~4.2.1",
-      "cpx": "~1.5.0",
+      "copyfiles": "~2.2.0",
       "font-awesome": "~4.7.0",
       "html5shiv": "~3.7.3",
-      "jquery": "~3.3.1",
-      "jshint": "~2.10.2",
-      "npm-run-all": "~4.1.5",
-      "uglify-js": "~3.4.9"
+      "jquery": "~3.4.1"
    }
 }
