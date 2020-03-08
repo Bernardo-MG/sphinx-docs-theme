@@ -69,14 +69,14 @@ All other Python dependencies are indicated on the requirements.txt file.
 
 These dependencies can be installed with:
 
-``$ pip install --upgrade -r requirements.txt``
+``pip install --upgrade -r requirements.txt``
 
 The frontend libraries are defined as `npm`_ dependencies, and require this package
 manager to be defined.
 
 These dependencies can be installed with:
 
-``$ python setup.py frontend``
+``python setup.py frontend``
 
 Installing
 ~~~~~~~~~~
@@ -84,11 +84,11 @@ Installing
 The project is offered as a `Pypi package`_, and using pip is the preferred way
 to install it. For this use the following command;
 
-``$ pip install sphinx-docs-theme``
+``pip install sphinx-docs-theme``
 
 If needed, manual installation is possible:
 
-``$ python setup.py install``
+``python setup.py install``
 
 Using it as a dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~

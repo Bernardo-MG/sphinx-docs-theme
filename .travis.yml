@@ -4,20 +4,15 @@
 # Using Python for the project
 language: python
 python:
-  - "3.4"
-  - "3.5"
-  # Python 3.6 is set to test and deploy the docs in the configuration matrix
-  #- "3.6"
-  # PyPy currently is not working with the required dependencies
-  #- "pypy"
-  #- "pypy3"
+  - "3.7"
+  - "3.8"
 env:
-  - TEST_DOCS=true
+  - TEST_DOCS=true COVERAGE=true
 matrix:
   include:
-    # Tests and deploys docs, also runs coverage report
+    # Tests and deploys docs
     - python: "3.6"
-      env: COVERAGE=true TEST_DOCS=true DEPLOY_DOCS=true
+      env: TEST_DOCS=true COVERAGE=true DEPLOY_DOCS=true
 addons:
   apt:
     packages:
