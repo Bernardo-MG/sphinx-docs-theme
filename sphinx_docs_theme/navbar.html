@@ -1,5 +1,4 @@
-<nav id="navbar-main"
-     class="navbar navbar-expand-md navbar-light bg-light">
+<nav id="navbar-main" class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="{{ pathto('./index.html', 1) }}">{{ project }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-menu" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
@@ -14,22 +13,22 @@
                   Github</span></a>
             </div>
             {% endif %}
-        </div>
-        {% if theme_navbar_links %}
-        <div class="col-sm">
-            <ul class="navbar-nav">
-                {% for link_group in theme_navbar_links %}
-                <li class="nav-item dropdown">
-                   <a href="#" class="nav-link dropdown-toggle" id="examplesDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link_group[0] }}</a>
-                   <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="examplesDropdown">
-                    {% for link in link_group[1] %}
-                    <a href="{{ pathto(link[1], 1) }}" class="dropdown-item" title="{{ link[0] }}">{{ link[0] }}</a>
+            {% if theme_navbar_links %}
+            <div class="col-sm">
+                <ul class="navbar-nav">
+                    {% for link_group in theme_navbar_links %}
+                    <li class="nav-item dropdown">
+                       <a href="#" class="nav-link dropdown-toggle" id="examplesDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link_group[0] }}</a>
+                       <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="examplesDropdown">
+                        {% for link in link_group[1] %}
+                        <a href="{{ pathto(link[1], 1) }}" class="dropdown-item" title="{{ link[0] }}">{{ link[0] }}</a>
+                        {% endfor %}
+                       </div>
+                    </li>
                     {% endfor %}
-                   </div>
-                </li>
-                {% endfor %}
-            </ul>
+                </ul>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 </nav>
