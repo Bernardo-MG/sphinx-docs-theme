@@ -1,7 +1,7 @@
 {
    "scripts": {
       "copy-bootstrap": "copyfiles -u 4 \"./node_modules/bootstrap/dist/js/*.js\" ./sphinx_docs_theme/static/lib/bootstrap/js",
-      "copy-bootswatch": "copyfiles -u 4 \"./node_modules/bootswatch/dist/litera/*.css\" ./sphinx_docs_theme/static/lib/bootswatch/readable",
+      "copy-bootswatch": "copyfiles -u 4 \"./node_modules/bootswatch/dist/litera/*.css\" ./sphinx_docs_theme/static/lib/bootswatch/litera",
       "copy-fontawesome": "copyfiles -u 2 \"./node_modules/font-awesome/**/*\" ./sphinx_docs_theme/static/lib/font-awesome",
       "copy-html5shiv": "copyfiles -u 3 \"./node_modules/html5shiv/dist/*.css\" ./sphinx_docs_theme/static/lib/html5shiv",
       "copy-jquery": "copyfiles -u 3 \"./node_modules/jquery/dist/*.js\" ./sphinx_docs_theme/static/lib/jquery",
