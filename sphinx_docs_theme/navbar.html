@@ -6,7 +6,7 @@
     </button>
 
     <div id="navbar-main-menu" class="collapse navbar-collapse">
-        <small class="navbar-text">{{ version }}{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
+        <small class="navbar-text"><span id="navbar-version">{{ version }}</span>{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
         <div class="ml-auto d-flex align-items-center row">
             {% if theme_scm_url and theme_scm_name|string() == 'Github' %}
             <div class="col-sm">
