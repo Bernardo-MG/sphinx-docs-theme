@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 {% include "head.html" %}
-<body>
-<header class="header">
+<body class="d-flex flex-column">
+<header>
     {% include "navbar.html" %}
 </header>
-<section id="main-section" class="container">
+<section id="main-section" class="container flex-grow-1">
     {% block body %}{% endblock %}
-    <p class="pull-right internal-link"><a href="#main-section">Back to top</a></p>
 </section>
 {% include "footer.html" %}
 {% include "scripts.html" %}

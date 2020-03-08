@@ -17,7 +17,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -73,7 +72,6 @@ out/
 
 # Node
 /node_modules/
-package-lock.json
 
 # Dependencies
 sphinx_docs_theme/static/lib/bootstrap
@@ -82,5 +80,4 @@ sphinx_docs_theme/static/lib/font-awesome
 sphinx_docs_theme/static/lib/jquery
 
 # Minified
-sphinx_docs_theme/static/**/*.min.js
-sphinx_docs_theme/static/**/*.min.css
+sphinx_docs_theme/static/css/*.min.css
