@@ -26,7 +26,7 @@ Features
 
 - Minimalist and reactive look
 - `HTML5`_
-- `Bootstrap 3`_
+- `Bootstrap 4`_
 - `Font Awesome`_ icons
 - `highlight.js`_ for syntax highlighting
 - Prepared for `Facebook's Open Graph`_ and `Twitter Cards`_
@@ -160,7 +160,7 @@ The project has been released under the `MIT License`_.
 .. _npm: https://www.npmjs.com/
 
 .. _HTML5: http://www.w3.org/TR/html5/
-.. _Bootstrap 3: http://getbootstrap.com
+.. _Bootstrap 4: http://getbootstrap.com
 .. _Font Awesome: https://fortawesome.github.io/Font-Awesome/
 .. _highlight.js: https://highlightjs.org/
 .. _Facebook's Open Graph: http://ogp.me/
