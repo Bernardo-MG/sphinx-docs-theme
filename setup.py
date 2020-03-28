@@ -68,7 +68,7 @@ class InstallWithFrontend(install):
     def run(self):
         self.frontend_command.run()
 
-        self.do_egg_install()
+        super().run()
 
 
 setup(
