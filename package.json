@@ -11,7 +11,7 @@
    "devDependencies": {
       "bootstrap": "~4.4.1",
       "bootswatch": "~4.4.1",
-      "clean-css-cli": "~4.2.1",
+      "clean-css-cli": "~4.3.0",
       "copyfiles": "~2.2.0",
       "font-awesome": "~4.7.0",
       "html5shiv": "~3.7.3",

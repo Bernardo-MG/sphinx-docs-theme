@@ -1,14 +1,14 @@
 # Installation and deployment
-setuptools==45.2.0
+setuptools==46.1.1
 twine==3.1.1
-bernardomg.tox-test-command==1.1.4
-bernardomg.version-extractor==1.0.2
+bernardomg.tox-test-command==1.1.6
+bernardomg.version-extractor==1.0.3
 
 # Testing
-tox==3.14.4
+tox==3.14.5
 
 # Sphinx
-Sphinx==2.4.1
+Sphinx==2.4.4
 
 # Documentation
-Pygments==2.5.2
+Pygments==2.6.1
