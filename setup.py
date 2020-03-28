@@ -105,8 +105,11 @@ setup(
     long_description=read('README.rst'),
     install_requires=[
         'Fabric',
-        'Sphinx'
+        'Sphinx',
+        'bernardomg.tox-test-command',
+        'bernardomg.version-extractor'
     ],
+    python_requires='>=3.6',
     tests_require=_tests_require,
     extras_require={'test': _tests_require},
     cmdclass={
