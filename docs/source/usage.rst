@@ -2,10 +2,9 @@
 Usage
 =====
 
-This project is meant to be used with a `Sphinx`_ project, as it is a UI theme
-for it.
+The Sphinx Docs Theme is meant for `Sphinx`_ projects.
 
-There are two ways to apply the theme, which are nearly the same. It can be
+There are two ways to apply it, which are nearly the same. It can be
 installed in the local repository and then be used as a dependency, or the
 project code (the 'sphinx_docs_theme' folder) can be copied to the Sphinx project
 themes folder.

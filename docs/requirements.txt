@@ -1,6 +1,6 @@
 # Sphinx
-Sphinx==1.6.5
+Sphinx==2.4.4
 
 # Documentation
-Pygments==2.2.0
-sphinx-docs-theme==1.0.0
+Pygments==2.6.1
+sphinx-docs-theme==1.0.3

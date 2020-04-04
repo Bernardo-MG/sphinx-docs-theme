@@ -2,14 +2,11 @@
 Theme configuration
 ===================
 
-The theme includes a series of variables which can be configured to adapt the
-data shown.
+The theme includes a series of configuration variables. It is recommended
+filling up as much information as possible to show the project's full data.
 
-Actually for the theme to work as expected, showing the project's full data,
-it is recommended filling up as much information as possible.
-
-The data is added to the 'html_theme_options' map variable on the Sphinx
-project 'conf.py' file. As these are theme options they are also stored
+The configuration is added to the 'html_theme_options' map variable on the
+Sphinx project 'conf.py' file. As these are theme options they are also stored
 on the 'theme.conf' file.
 
 -----

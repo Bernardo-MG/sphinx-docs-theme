@@ -8,7 +8,6 @@ from setuptools.command.install import install
 
 from tox_test_command import ToxTestCommand
 from sphinx.setup_command import BuildDoc
-from version_extractor import extract_version_init
 
 
 """
@@ -18,9 +17,6 @@ This is prepared for easing the generation of deployment files.
 """
 
 __license__ = 'MIT'
-
-# Source package
-_source_package = 'sphinx_docs_theme/'
 
 # Test requirements
 _tests_require = ['tox']
@@ -77,7 +73,7 @@ setup(
     include_package_data=True,
     package_data={
     },
-    version=extract_version_init(_source_package),
+    version='1.0.4',
     description='Sphinx Theme for documentation sites.',
     author='Bernardo Martínez Garrido',
     author_email='programming@bernardomg.com',

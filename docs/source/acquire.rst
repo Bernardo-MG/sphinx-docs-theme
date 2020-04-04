@@ -2,15 +2,13 @@
 Acquiring the project
 =====================
 
-The project files are hosted on `PyPi`_, allowing them to be acquired with pip.
-
-For this, just use the following command:
+As it is hosted on `PyPi`_ it can be acquired with pip:
 
 .. code::
 
     pip install sphinx-docs-theme
 
-If needed, manual installation is possible:
+Or, not recommended, it may be installed manually:
 
 .. code::
 
