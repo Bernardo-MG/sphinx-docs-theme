@@ -18,7 +18,7 @@ jobs:
       with:
         python-version: 3.9
     - name: Set up Pypi settings
-      uses: bernardo-mg/deployment-pypi-settings-action@v1.0.3
+      uses: bernardo-mg/deployment-pypi-settings-action@develop
       env:
         DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
