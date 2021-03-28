@@ -14,7 +14,7 @@ jobs:
     - name: Check-out
       uses: actions/checkout@v2
     - name: Set up Python 3.9
-      uses: actions/setup-python@v1.0.0
+      uses: actions/setup-python@v1.0.1
       with:
         python-version: 3.9
     - name: Install dependencies
@@ -23,10 +23,10 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Set up Pypi settings
-      uses: bernardo-mg/deployment-pypi-settings-action@v1.0.0
-      with:
-        username: ${{ secrets.DEPLOY_USER }}
-        password: ${{ secrets.DEPLOY_PASSWORD }}
+      uses: bernardo-mg/deployment-pypi-settings-action@v1.0.1
+      env:
+        DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
     - name: Build distribution
       run: python setup.py sdist bdist_wheel
     - name: Deploy
