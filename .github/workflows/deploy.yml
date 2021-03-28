@@ -17,11 +17,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Set up Pypi settings
-      uses: bernardo-mg/deployment-pypi-settings-action@develop
-      env:
-        DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-        DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -31,3 +26,6 @@ jobs:
       run: python setup.py sdist bdist_wheel
     - name: Deploy
       run: twine upload -r pypi dist/*
+      env:
+        TWINE_USERNAME: ${{ secrets.DEPLOY_USER }}
+        TWINE_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
