@@ -23,7 +23,7 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Set up Pypi settings
-      uses: bernardo-mg/deployment-pypi-settings-action@v1.0.2
+      uses: bernardo-mg/deployment-pypi-settings-action@master
       env:
         DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
