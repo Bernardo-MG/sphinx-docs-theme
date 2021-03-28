@@ -50,7 +50,7 @@ The source files for the docs, a small `Sphinx`_ project, are kept in the 'docs 
 
 These can be built if needed:
 
-``$ python setup.py build_docs``
+``python setup.py build_docs``
 
 Usage
 -----
