@@ -9,6 +9,3 @@ tox==3.23.0
 # Documentation
 Sphinx==3.5.3
 Pygments==2.8.1
-
-# Documentation
-Pygments==2.6.1
