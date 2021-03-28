@@ -4,31 +4,28 @@
        <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar-main-menu" class="collapse navbar-collapse">
-        <small class="navbar-text"><span id="navbar-version">{{ version }}</span>{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
-        <div class="ml-auto d-flex align-items-center row">
-            {% if theme_scm_url and theme_scm_name|string() == 'Github' %}
-            <div class="col-sm">
-               <a href="{{ theme_scm_url }}" title="GitHub" aria-label="GitHub"><span class="fa fa-github pl-1" aria-hidden="true"></span><span class="d-none d-sm-block d-md-none">
-                  Github</span></a>
-            </div>
-            {% endif %}
-            {% if theme_navbar_links %}
-            <div class="col-sm">
-                <ul class="navbar-nav">
-                    {% for link_group in theme_navbar_links %}
-                    <li class="nav-item dropdown">
-                       <a href="#" class="nav-link dropdown-toggle" id="examplesDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link_group[0] }}</a>
-                       <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="examplesDropdown">
-                        {% for link in link_group[1] %}
-                        <a href="{{ pathto(link[1], 1) }}" class="dropdown-item" title="{{ link[0] }}">{{ link[0] }}</a>
-                        {% endfor %}
-                       </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-        </div>
+    <small class="navbar-text d-none d-md-block"><span id="navbar-version">{{ version }}</span>{% if theme_publish_date %} (<time>{{ theme_publish_date }}{% endif %}</time>)</small>
+    {% if theme_scm_url and theme_scm_name|string() == 'Github' %}
+    <div class="col-sm d-none d-md-block">
+       <a href="{{ theme_scm_url }}" title="GitHub" aria-label="GitHub"><span class="fa fa-github pl-1" aria-hidden="true"></span><span class="d-none d-sm-block d-md-none">
+          Github</span></a>
     </div>
+    {% endif %}
+
+    {% if theme_navbar_links %}
+    <div class="collapse navbar-collapse" id="navbar-main-menu">
+        <ul class="nav navbar-nav ml-auto">
+            {% for link_group in theme_navbar_links %}
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="{{ link_group[0].replace(" ", "_") }}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link_group[0] }}</a>
+                <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="examplesDropdown">
+                    {% for link in link_group[1] %}
+                    <a href="{{ pathto(link[1], 1) }}" class="dropdown-item" title="{{ link[0] }}">{{ link[0] }}</a>
+                    {% endfor %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 </nav>
