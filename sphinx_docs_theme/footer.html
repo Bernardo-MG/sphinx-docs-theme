@@ -11,6 +11,7 @@
                 </dl>
             </div>
             {% endif %}
+            {% if theme_scm_name or theme_scm_url or theme_ci_name or theme_ci_url or theme_issues_name and theme_issues_url %}
             <div class="col">
                 <dl class="text-center mb-1">
                     {% if theme_scm_name and theme_scm_url %}
@@ -25,6 +26,7 @@
                     {% endif %}
                 </dl>
             </div>
+            {% endif %}
             {% if theme_releases_repos %}
             <div class="col">
                 <dl class="text-center mb-1">
