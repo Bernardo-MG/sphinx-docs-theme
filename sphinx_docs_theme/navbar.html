@@ -18,7 +18,7 @@
             {% for link_group in theme_navbar_links %}
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" id="{{ link_group[0].replace(" ", "_") }}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link_group[0] }}</a>
-                <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="examplesDropdown">
+                <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="{{ link_group[0].replace(" ", "_") }}">
                     {% for link in link_group[1] %}
                     <a href="{{ pathto(link[1], 1) }}" class="dropdown-item" title="{{ link[0] }}">{{ link[0] }}</a>
                     {% endfor %}
