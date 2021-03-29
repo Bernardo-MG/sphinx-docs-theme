@@ -22,6 +22,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Install frontend dependencies
+      run: python setup.py frontend
     - name: Build distribution
       run: python setup.py sdist bdist_wheel
     - name: Deploy
