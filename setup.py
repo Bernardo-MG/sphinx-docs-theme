@@ -73,7 +73,7 @@ setup(
     include_package_data=True,
     package_data={
     },
-    version='1.0.5',
+    version='1.0.6',
     description='Sphinx Theme for documentation sites.',
     author='Bernardo Martínez Garrido',
     author_email='programming@bernardomg.com',
