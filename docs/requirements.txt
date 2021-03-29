@@ -2,5 +2,5 @@
 Sphinx==2.4.4
 
 # Documentation
-Pygments==2.6.1
+Pygments==2.7.4
 sphinx-docs-theme==1.0.3
